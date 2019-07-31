@@ -1,0 +1,14 @@
+class: Server
+
+attributes:
+    name (string)
+    hourly_wage (float)
+    tables_currently_waiting (array)
+    currently_clocked_in? (boolean)
+    can_serve_alcohol? (boolean)
+
+methods:
+    add_table(table_number) => (adds table_number to tables_currently_waiting array)
+    clock_in => (changes currently_clocked_in? to true)
+    give_raise(wage_increase) => (increase hourly_wage by wage_increase)
+    give_liquor_privileges => (changes can_serve_alcohol? to true)
