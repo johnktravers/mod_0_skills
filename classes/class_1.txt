@@ -1,0 +1,19 @@
+class: Menu
+
+attributes:
+    restaurant_name (string)
+    foods (array)
+    beverages (array)
+    has_images (boolean)
+    language (string)
+    food_prices (hash) # { symbol: float } => { food_1: 11.20, food_2: 14.00 ...}
+    beverage_prices (hash) # { symbol: float } => { bev_1: 2.00, bev_2: 3.50 ...}
+    number_of_pages (integer)
+    current_page (integer) # The current page open to the customer
+
+methods:
+    turn_page => (adds 1 to the current_page)
+    translate(new_language) => (changes language to new_language)
+    adjust_food_price(food, price) => (changes price (value) of food (key) in food_prices hash)
+    adjust_beverage_price(beverage, price) => (changes price (value) of beverage (key) in beverage_prices hash)
+    insert_images => (changes has_images to true)
