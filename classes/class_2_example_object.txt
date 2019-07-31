@@ -1,0 +1,14 @@
+object: ben
+
+attributes:
+    name: "Ben"
+    hourly_wage: 8.10
+    tables_currently_waiting: [1, 4, 7, 8]
+    currently_clocked_in?: true
+    can_serve_alcohol?: false
+
+methods:
+    add_table(6) => tables_currently_waiting = [1, 4, 6, 7, 8]
+    clock_out => currently_clocked_in? = false, tables_currently_waiting = []
+    give_raise(0.50) => hourly_wage = 8.60
+    give_liquor_privileges => can_serve_alcohol? = true
