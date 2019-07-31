@@ -1,0 +1,19 @@
+object: suh_sushi_menu
+
+attributes:
+    restaurant_name: "Suh Sushi"
+    foods: ["teriyaki bowl", "sashimi platter", "spicy tuna roll", "unagi roll"]
+    beverages: ["fanta", "coke", "iced tea"]
+    has_images: false
+    language: "English"
+    food_prices: { teriyaki_bowl: 7.00, sashimi_platter: 20.00, spicy_tuna_roll: 9.00, unagi_roll: 7.00 }
+    beverage_prices: { fanta: 1.00, coke: 1.00, iced_tea: 2.00 }
+    number_of_pages: 3
+    current_page: 2
+
+methods:
+    turn_page => current_page = 3
+    translate("Japanese") => language = "Japanese"
+    adjust_food_price(:teriyaki_bowl, 8.00) => food_prices = { teriyaki_bowl: 8.00, sashimi_platter: 20.00, spicy_tuna_roll: 9.00, unagi_roll: 7.00 }
+    adjust_beverage_price(:fanta, 1.50) => beverage_prices = { fanta: 1.50, coke: 1.00, iced_tea: 2.00 }
+    insert_images => has_images = true
